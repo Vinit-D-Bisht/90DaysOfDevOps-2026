@@ -178,13 +178,12 @@ git commit -m "Improved git notes"
 git log --oneline
 ```
 
-### Example Output
+### Output
 
 ```bash
-f3a1b2c Improved git notes
-a8d2f11 Updated viewing changes section
-c9e2a44 Added workflow commands
-b2f7d12 Initial commit
+f5364bb (HEAD -> master) improved notes file
+04b54ac (origin/master, origin/HEAD) chore:day-21 added and done
+c293e92 chore:day-20 done and added
 ```
 
 ---
