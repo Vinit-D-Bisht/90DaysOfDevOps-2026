@@ -1,0 +1,4 @@
+startup_script_fold: >
+  echo "Starting Server"
+  docker compose up -d
+  echo "Server Started"
