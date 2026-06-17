@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypvpod
+spec:
+  containers:
+  - name: mypvcontainer
+    image: busybox:latest
+    command:
+      - /bin/sh
+      - -c
+      - |
+        mkdir -p /data
+        while true; do
+          echo "$(date '+%Y-%m-%d %H:%M:%S') - Hello from Kubernetes Pod with pv" >> /data/message.txt
+          sleep 10
+        done
+    volumeMounts:
+    - name: my-storage
+      mountPath: /data
+
+  volumes:
+  - name: my-storage
+    persistentVolumeClaim:
+      claimName: mypvc
+
