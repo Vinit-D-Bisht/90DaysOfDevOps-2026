@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-headless-svc
+  labels:
+    app: my-app
+spec:
+  clusterIP: None 
+  selector:
+    app: my-app
+  ports:
+    - name: mysql
+      port: 3306
